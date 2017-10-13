@@ -1,50 +1,46 @@
 /**
- * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
  *
- * By Hakim El Hattab, http://hakim.se
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Lato';
-section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #222; }
-
-span.footer {
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  font-size: 24px;
-}
-
-.animated-link {
-  width: 0;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  position:relative;
-}
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #ABE4FF;
-  background-color: #ABE4FF; }
+  background: #1d2951;
+  background-color: #1d2951; }
 
 .reveal {
-  font-family: "Source Code Pro", sans-serif;
-  font-size: 38px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 40px;
   font-weight: normal;
-  /* color: #fff;  */
-}
+  color: #00ffff; }
 
 ::selection {
   color: #fff;
-  background: #bee4fd;
+  background: rgba(0, 0, 0, 0.99);
+  text-shadow: none; }
+
+::-moz-selection {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.99);
   text-shadow: none; }
 
 .reveal .slides > section,
 .reveal .slides > section > section {
   line-height: 1.3;
   font-weight: inherit; }
+
+span.footer {
+  bottom: 0;
+  position: fixed;
+  left: 0;  
+  font-size: 24px;
+}
 
 /*********************************************
  * HEADERS
@@ -56,31 +52,117 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #222;
+  color: #00ffff;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
+  text-transform: none;
   text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2em; }
+  font-size: 2; }
 
 .reveal h2 {
-  font-size: 1.3em; }
+  font-size: 1.4em; }
 
 .reveal h3 {
-  font-size: 1em; }
+  font-size: 0.7em; }
 
 .reveal h4 {
-  font-size: 0.8em; }
+  font-size: 0.3em; }
+
+/*********************************************
+ * CUSTOM COLORS
+ *********************************************/
+
+.reveal .highlight {
+  color: #ff00ff;
+}
+
+/*********************************************
+ * QUOTES
+ *********************************************/
+.reveal blockquote {
+  display:block;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+
+  /*Font*/
+  font-family: "Dancing Script", cursive;
+  font-size: 2em;
+  font-style: italic;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+}
+
+.reveal blockquote:before {
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 120px;
+  font-weight: bold;
+  color: #999;
+
+  /*Positioning*/
+  position: absolute;
+  left: -40px;
+  top: -5px;
+}
+
+.reveal cite {
+  font-size: 40px;
+  display: block;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.reveal cite:before {
+  content: "\2014 \2009";
+}
+
+/*********************************************
+ * CUSTOM CSS
+ *********************************************/
+
+.reveal .center {
+  text-align: center;
+}
+
+.reveal .inline-block {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.reveal .no-margin p {
+  margin-top: 0px;
+}
+
+.reveal .no-margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.reveal .no-margin h2 {
+  margin-bottom: 0px;
+}
+
+.reveal .twitter-tweet {
+  margin-left: 200px;
+  margin-top: 150px;
+}
+
 
 /*********************************************
  * OTHER
  *********************************************/
 .reveal p {
   margin: 20px 0;
-  line-height: 1.3; }
+  line-height: 1.3;
+  font-family: 'Open Sans';
+}
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
@@ -128,40 +210,19 @@ body {
 .reveal dd {
   margin-left: 40px; }
 
-.reveal q,
-.reveal blockquote {
-  quotes: none; }
-
-.reveal blockquote {
-  display: block;
-  position: relative;
-  width: 70%;
-  margin: 20px auto;
-  padding: 5px;
-  font-style: italic;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
-
-.reveal blockquote p:first-child,
-.reveal blockquote p:last-child {
-  display: inline-block; }
-
 .reveal q {
   font-style: italic; }
 
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 20px auto;
-  margin-bottom: 0px;
   text-align: left;
-  font-size: 0.56em;
+  font-size: 0.55em;
   font-family: monospace;
   line-height: 1.2em;
-  word-wrap: break-word;
-  /* box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); */
-}
+  word-wrap: break-word; }
 
 .reveal code {
   font-family: monospace; }
@@ -216,88 +277,67 @@ body {
 
 /*********************************************
  * LINKS
- */
+ *********************************************/
 .reveal a {
-  font-style: italic;
-  padding: 4px;
-  background-color: #d9abff;
-  color: black;
-  color: white;
-  text-decoration: none;
-transition: all .25s ease; }
+  color: #e5d0ff;
+  text-decoration: underline;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
 .reveal a:hover {
-  background-color: #abe4ff;
-transition: all .25s ease; }
-/* .reveal a { */
-/* color: #42affa; */
-/* text-decoration: none; */
-/* -webkit-transition: color .15s ease; */
-  /* -moz-transition: color .15s ease; */
-  /* transition: color .15s ease; } */
-/*  */
-/* .reveal a:hover { */
-  /* color: #8dcffc; */
-  /* text-shadow: none; */
-  /* border: none; } */
+  color: #0000f1;
+  text-shadow: none;
+  border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #068de9; }
+  background: #00003f; }
 
 /*********************************************
  * IMAGES
  *********************************************/
-/* .reveal section img { */
-/*   margin: 15px 0px; */
-/*   background: rgba(255, 255, 255, 0.12); */
-/*   border: 4px solid #fff; */
-/*   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); } */
-
-.reveal section img.plain {
-  border: 0;
-  box-shadow: none; }
-
-/* .reveal a img {
-  -webkit-transition: all .15s linear;
-  -moz-transition: all .15s linear;
-  transition: all .15s linear; }*/
 
 .reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #42affa;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); 
-}
+  border-color: #00008B;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-left.enabled {
-  border-right-color: #42affa; }
+  border-right-color: #00bfa5; }
 
 .reveal .controls .navigate-right,
 .reveal .controls .navigate-right.enabled {
-  border-left-color: #42affa; }
+  border-left-color: #00bfa5; }
 
 .reveal .controls .navigate-up,
 .reveal .controls .navigate-up.enabled {
-  border-bottom-color: #42affa; }
+  border-bottom-color: #00bfa5; }
 
 .reveal .controls .navigate-down,
 .reveal .controls .navigate-down.enabled {
-  border-top-color: #42affa; }
+  border-top-color: #00bfa5; }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #8dcffc; }
+  border-right-color: #a7ffeb; }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #8dcffc; }
+  border-left-color: #a7ffeb; }
 
 .reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #8dcffc; }
+  border-bottom-color: #a7ffeb; }
 
 .reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #8dcffc; }
+  border-top-color: #a7ffeb; }
 
 /*********************************************
  * PROGRESS BAR
@@ -306,7 +346,7 @@ transition: all .25s ease; }
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #42affa;
+  background: #00bfa5;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
