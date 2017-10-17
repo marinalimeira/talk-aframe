@@ -30,6 +30,9 @@
         </section>
 
         <!-- poderia mudar de cor -->
+        <section>
+          <h1>Agenda</h1>
+        </section>
 
         <section>
           <img src="images/ablaster1.gif" alt="">
@@ -53,10 +56,10 @@
           <h2>Virtual Reality Markup Language</h2>
         </section>
 
+        <!--w
         <section>
           nao funcionou pois
         </section>
-        <!--w
         <section>
           eb 2d -> web 3d 
           algo pra que3brar contexto
@@ -84,7 +87,7 @@
 
         <section>
           <a href="https://w3c.github.io/webvr/">w3c.github.io/webvr</a>
-          <p class="fragment">"The specification is currently under active developement."</p>
+          <p>The specification is currently under active developement."</p>
           <p class="fragment">"It is not a W3C Standard nor is it on the W3C Standards Track."</p>
         </section>
 
@@ -119,6 +122,14 @@
         </section>
 
         <section>
+          <pre>
+            <code data-trim data-noescape>
+
+            </code>
+          </pre>
+        </section>
+
+        <section>
           <h1>Images 360°!</h1>
           <a href="demo/360.html">Pedra do Bauzinho - São Bento do Sapucaí/SP</a>
         </section>
@@ -134,10 +145,6 @@
 &lt;/a-scene&gt;
             </code>
           </pre>
-        </section>
-
-        <section>
-          mostrar códigos
         </section>
 
         <section>
@@ -168,23 +175,16 @@
           <!-- poderia mudar de cor -->
 
         <section>
-          <h1>Primitivas</h1>
-          <pre>
-          <code data-trim data-noescape>
-&lt;a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"&gt;&lt;/a-box&gt;
-          </code>
-          </pre>
+          <h1>Entity Component System (ECS)</h1>
+          <h2 class="highlight">"entidade-componente-sistema"</h2>
         </section>
 
         <section>
           <h1>Entity Component System (ECS)</h1>
-          <h2>"entidade-componente-sistema"</h2>
-        </section>
-
-        <section>
-          <h1>Entity Component System (ECS)</h1>
-          <h2>composição ao invés de herança</h2>
-          <h2 class="fragment">Cada objeto, uma entidade, que é formada por componentes</h2>
+          <ul>
+            <li>Composição ao invés de herança</li>
+            <li>Cada objeto, uma entidade - que é formada por componentes</li>
+          </ul>
         </section>
 
         <section>
@@ -201,7 +201,6 @@
           <ul>
             <li>Escopo global e gerenciamento dos componentes</li>
             <li>aka "func main()" -- ou uma thread</li>
-            <li>AFRAME.registerSystem (name, definition)</li>
           </ul>
         </section>
 
@@ -212,34 +211,43 @@
 &lt;a-entity&gt;&lt;/a-entity&gt;
             </code>
           </pre>
-          <pre>
-            <code data-trim data-noescape>
-&lt;a-scene&gt;&lt;/a-scene&gt;
-            </code>
-          </pre>
         </section>
 
         <section>
-          <h1>Entidades</h1>
+          <h1>Entidade</h1>
           <ul>
-            <li>a-entity</li>
             <li>Base de todos os objetos;</li>
-            <li>Sem componentes === <div></div></li>
           </ul>
         </section>
 
         <section>
           <h1>Componente</h1>
+          <pre>
+            <code data-trim data-noescape>
+&lt;a-entity
+  geometry=&quot;primitive: box&quot;
+  material=&quot;color: purple&quot;
+  position=&quot;-1 0.5 -3&quot;
+  rotation=&quot;0 45 0&quot;
+&gt;&lt;/a-entity&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h1>Componente</h1>
            <ul>
-             <li>atributos do a-entity</li>
+             <li>Atributos das entidades;</li>
              <li>Aparência, comportamento e funcionalidades;</li>
-             <li>AFRAME.registerComponent (name, definition)</li>
+             <li class="fragment">Uma entidade sem componentes === &lt;div&gt;&lt;/div&gt;</li>
            </ul>
         </section>
 
         <section>
+          <h1>Primitivas</h1>
           <pre>
           <code data-trim data-noescape>
+&lt;a-box color="purple" position="-1 0.5 -3" rotation="0 45 0"&gt;&lt;/a-box&gt;
           </code>
           </pre>
         </section>
@@ -265,15 +273,19 @@
 
         <!-- poderia mudar de cor -->
         <section>
-          Realidade Aumentada!
+          <h1>Realidade Aumentada</h1>
         </section>
 
+        <!-- poderia mudar de cor -->
         <section>
           <h1>Comunidade</h1>
-          <a href="https://aframevr-slack.herokuapp.com/">Slack</a>
-          <a href="https://aframe.io/blog/">Blog</a> - mencione <a href="https://twitter.com/aframevr">@aframevr</a> no Twitter!
-          <a href="https://aframe.io/aframe-school">A-frame School</a>
-          <a href="https://github.com/aframevr/aframe">Source</a>
+          <ul>
+            <li><a href="https://aframevr-slack.herokuapp.com/">Slack</a></li>
+            <li><a href="https://aframe.io/blog/">Blog</a> - mencione <a href="https://twitter.com/aframevr">@aframevr</a> no Twitter!  </li>
+            <li><a href="https://aframe.io/aframe-school">A-frame School</a></li>
+            <li><a href="https://github.com/aframevr/aframe">Github</a></li>
+            <li><a href="https://aframe.io/docs/">Documentação</a></li>
+          </ul>
         </section>
 
         <!-- links que nao sei o q fazer -->
@@ -286,6 +298,7 @@
           "Web é a plataforma"
         </section>
 
+        <!-- poderia mudar de cor -->
         <section>
           <h2>Referências</h2>
           <a href="https://www.w3.org/People/Raggett/vrml/vrml.html">www.w3.org/People/Raggett/vrml/vrml.html</a><br />
@@ -293,10 +306,8 @@
         </section>
 
         <section>
-          <pre>
-          <code data-trim data-noescape>
-          </code>
-          </pre>
+          <h1>Obrigada! :D</h1>
+          <a href="http://marinalimeira.com/">marinalimeira.com</a>
         </section>
       </div>
     </div>
