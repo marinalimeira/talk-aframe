@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="lib/css/color-brewer.css">
     <link rel="icon" type="image/x-icon" href="images/aframe-logo.png">
   </head>
 
@@ -28,54 +29,111 @@
           <img src="images/logos/puc.png" style="margin-top: 10px;">
         </section>
 
+        <!-- poderia mudar de cor -->
+
         <section>
-          gifs sobre vr
+          <img src="images/ablaster1.gif" alt="">
+          <a href="https://aframe.io/a-blast/">A-blast</a>
+        </section>
+
+        <!-- para pesquisar: why vrml failed-->
+
+        <section>
+          <h1>No início...</h1>
+          <h2>aka época do NetScape</h2>
         </section>
 
         <section>
-          web 2d -> web 3d
+          <h1>1994</h1>
+          <h2>Proposta de uma linguagem de marcação para realidade virtual na web</h2>
         </section>
 
         <section>
-          funcioa em muitos lugares!
-          webvr.rocks
+          <h1>VRML</h1>
+          <h2>Virtual Reality Markup Language</h2>
         </section>
 
         <section>
-          mozilla legal curtiu
+          nao funcionou pois
+        </section>
+        <!--w
+        <section>
+          eb 2d -> web 3d 
+          algo pra que3brar contexto
+          WEB! a 1 clique de distancia - compartilhar coisas é f[acil
+        </section>
+        -->
+
+        <section>
+          <h1>2014</h1>
+          <h2>É criado o WebVR</h2>
         </section>
 
         <section>
-          tem gente da mozilla fazendo paper
-          w3c tá investindo nisso tb
+          <h1>WebVR</h1>
+          <h2>Browsers ganham suporte<br>a dispostivos de ✧VR✧</h2>
         </section>
 
         <section>
-          https://w3c.github.io/webvr/
+          <h2>HTC VIVE,<br />
+            Oculus Rift,<br />
+            Samsung Gear VR,<br />
+            Google Daydream<br />
+            <a href="https://webvr.rocks/">webvr.rocks</a>
         </section>
 
         <section>
-          por hora, nao é padrao, mas ta indo
+          <a href="https://w3c.github.io/webvr/">w3c.github.io/webvr</a>
+          <p class="fragment">"The specification is currently under active developement."</p>
+          <p class="fragment">"It is not a W3C Standard nor is it on the W3C Standards Track."</p>
+        </section>
+
+        <!-- <section>
+          <h2>Não é só renderizar coisas em 3D,<span class="fragment"> VR é sobre experiências que te fazem acreditar que você está em outro lugar.</span></h2>
+        </section>-->
+
+        <section>
+          <h1>Mozilla <span class="highlight">❤</span> WebVR</h1>
+          <a href="https://mozvr.com/">mozvr.com</a>
         </section>
 
         <section>
-          dai, ~necessidades do frame
+          <h1>Manifesto Mozilla</h1>
+          <h2>"As pessoas precisam ter a capacidade de moldar a Internet e suas experiências com ela."</h2>
+        </section>
+
+        <!-- poderia mudar de cor -->
+        <section>
+          <h1>A-frame</h1>
+          <a href="http://aframe.io/">aframe.io</a>
         </section>
 
         <section>
-          a-frame
+          <h1>TL;DR</h1>
+          <h2>construir coisas em 3D utilizando HTML</h2>
         </section>
 
         <section>
-          funciona por cima do three.js! :D
-        </section>
-
-        <section>
-          three.js funciona assin...
-        </section>
-
-        <section>
+          Hello, DevFest
           hello webvr
+        </section>
+
+        <section>
+          <h1>Images 360°!</h1>
+          <a href="demo/360.html">Pedra do Bauzinho - São Bento do Sapucaí/SP</a>
+        </section>
+
+        <section>
+          <pre>
+            <code data-trim data-noescape>
+&lt;a-scene&gt;
+   &lt;a-assets&gt;
+     &lt;img id=&quot;pedra-do-bauzinho&quot; crossorigin=&quot;anonymous&quot; src=&quot;images/pedra-do-bauzinho.jpg&quot;&gt;
+   &lt;/a-assets&gt;
+   &lt;a-sky src=&quot;#pedra-do-bauzinho&quot;&gt;&lt;/a-sky&gt;
+&lt;/a-scene&gt;
+            </code>
+          </pre>
         </section>
 
         <section>
@@ -83,8 +141,107 @@
         </section>
 
         <section>
-          entity component patters
-        - nada de mvc! :P
+          <h1>Three.js</h1>
+          <a href="http://threejs.org/">threejs.org</a>
+        </section>
+
+        <!--<section>
+        <section>
+          <h2>Com A-frame, temos Three.js de forma declarativa</h2>
+        </section>
+
+          <h2>
+          <a href="https://threejs.org/">Three.js</a>,
+          <span class="fragment">assim como ReactVR e outros frameworks</span>
+          </h2>
+          </section>
+
+          <section>
+          <h1>Problema do Three.js</h1>
+          <ul>
+          <li>Iniciar cena</li>
+          <li>Criar iteração do render</li>
+          <li>Find webvr pollifill</li>
+          </ul>
+          </section>-->
+
+          <!-- poderia mudar de cor -->
+
+        <section>
+          <h1>Primitivas</h1>
+          <pre>
+          <code data-trim data-noescape>
+&lt;a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"&gt;&lt;/a-box&gt;
+          </code>
+          </pre>
+        </section>
+
+        <section>
+          <h1>Entity Component System (ECS)</h1>
+          <h2>"entidade-componente-sistema"</h2>
+        </section>
+
+        <section>
+          <h1>Entity Component System (ECS)</h1>
+          <h2>composição ao invés de herança</h2>
+          <h2 class="fragment">Cada objeto, uma entidade, que é formada por componentes</h2>
+        </section>
+
+        <section>
+          <h1>Sistema</h1>
+          <pre>
+            <code data-trim data-noescape>
+&lt;a-scene&gt;&lt;/a-scene&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h1>Sistema</h1>
+          <ul>
+            <li>Escopo global e gerenciamento dos componentes</li>
+            <li>aka "func main()" -- ou uma thread</li>
+            <li>AFRAME.registerSystem (name, definition)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Entidade</h1>
+          <pre>
+            <code data-trim data-noescape>
+&lt;a-entity&gt;&lt;/a-entity&gt;
+            </code>
+          </pre>
+          <pre>
+            <code data-trim data-noescape>
+&lt;a-scene&gt;&lt;/a-scene&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h1>Entidades</h1>
+          <ul>
+            <li>a-entity</li>
+            <li>Base de todos os objetos;</li>
+            <li>Sem componentes === <div></div></li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Componente</h1>
+           <ul>
+             <li>atributos do a-entity</li>
+             <li>Aparência, comportamento e funcionalidades;</li>
+             <li>AFRAME.registerComponent (name, definition)</li>
+           </ul>
+        </section>
+
+        <section>
+          <pre>
+          <code data-trim data-noescape>
+          </code>
+          </pre>
         </section>
 
         <section>
@@ -92,6 +249,7 @@
           zer os componentes
         </section>
 
+        <!-- poderia mudar de cor -->
         <section>
           web inspector :P
         </section>
@@ -105,21 +263,33 @@
           gifs do a-painter da mozilla
         </section>
 
+        <!-- poderia mudar de cor -->
         <section>
-          gifs do joguinho legfal  da mozilla
+          Realidade Aumentada!
         </section>
 
         <section>
-          comunidade - links legais - pegar do vlad
+          <h1>Comunidade</h1>
+          <a href="https://aframevr-slack.herokuapp.com/">Slack</a>
+          <a href="https://aframe.io/blog/">Blog</a> - mencione <a href="https://twitter.com/aframevr">@aframevr</a> no Twitter!
+          <a href="https://aframe.io/aframe-school">A-frame School</a>
+          <a href="https://github.com/aframevr/aframe">Source</a>
         </section>
 
-        <section data-background="#f4e11e">
+        <!-- links que nao sei o q fazer -->
+        <section>
+          A-Frame uses the WebVR API to gain access to VR headset sensor data (position, orientation) to transform the camera and to render content directly to VR headsets. Note that WebVR, which provides data, should not be confused nor conflated with WebGL, which provides graphics and rendering.
         </section>
 
-        <section data-background="#E2F1FF">
+
+        <section>
+          "Web é a plataforma"
         </section>
 
-        <section  data-background="#D9ABFF">
+        <section>
+          <h2>Referências</h2>
+          <a href="https://www.w3.org/People/Raggett/vrml/vrml.html">www.w3.org/People/Raggett/vrml/vrml.html</a><br />
+          <a href="https://www.mozilla.org/pt-BR/about/manifesto/">www.mozilla.org/about/manifesto</a>
         </section>
 
         <section>
@@ -127,34 +297,6 @@
           <code data-trim data-noescape>
           </code>
           </pre>
-        </section>
-
-        <section data-background="#f6dd25">
-          <img src="images/johnny-five-logo.png" height="300px"/>
-          <aside class="notes">
-            rick waldron, jquery. modulo que nos dá esses objetos do mundo real, que disparam eventos.
-          </aside>
-        </section>
-
-
-        <section data-background="#D9ABFF">
-          <img src="images/pc-arduino-firmata.png" height="300px" alt="" />
-          <aside class="notes">
-            resolve as tretas com modulo de bluetooth ouo aspberrypi
-          </aside>
-        </section>
-
-
-        <section data-background="#ffffff">
-          <img src="images/led-blink.gif" height="400px" alt="">
-        </section>
-
-        <section>
-          <h1>DEMO</h1>
-        </section>
-
-        <section data-background="#D9ABFF">
-          <img src="images/mqtt.png"/>
         </section>
       </div>
     </div>
