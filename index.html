@@ -27,16 +27,23 @@
           <img src="images/logos/bio.svg" height="50px" style="margin-bottom: 35px;">&nbsp;&nbsp;&nbsp;
           <img src="images/logos/mozilla-br.png" height="150px">&nbsp;&nbsp;&nbsp;
           <img src="images/logos/puc.png" style="margin-top: 10px;">
+          <img src="images/rg.png" style="margin-top: 10px; margin-left: 20px;">
         </section>
 
         <!-- poderia mudar de cor -->
         <section>
           <h1>Agenda</h1>
-        </section>
-
-        <section>
-          <img src="images/ablaster1.gif" alt="">
-          <a href="https://aframe.io/a-blast/">A-blast</a>
+          <ul>
+            <li>Histórico</li>
+            <li>WebVR</li>
+            <li>Mozilla</li>
+            <li>A-frame</li>
+            <li>ECS</li>
+            <li>Inspector</li>
+            <li>AR.js</li>
+            <li>Comunidade</li>
+            <li>Fim.</li>
+          </ul>
         </section>
 
         <!-- para pesquisar: why vrml failed-->
@@ -56,12 +63,16 @@
           <h2>Virtual Reality Markup Language</h2>
         </section>
 
+        <section>
+          <h1>Porém, a web não estava preparada :(</h1>
+        </section>
+
         <!--w
         <section>
           nao funcionou pois
         </section>
         <section>
-          eb 2d -> web 3d 
+          eb 2d -> web 3d
           algo pra que3brar contexto
           WEB! a 1 clique de distancia - compartilhar coisas é f[acil
         </section>
@@ -69,12 +80,12 @@
 
         <section>
           <h1>2014</h1>
-          <h2>É criado o WebVR</h2>
+          <h2>WebVR</h2>
         </section>
 
         <section>
           <h1>WebVR</h1>
-          <h2>Browsers ganham suporte<br>a dispostivos de ✧VR✧</h2>
+          <h2>Browsers ganham suporte<br>a dispositivos de ✧VR✧</h2>
         </section>
 
         <section>
@@ -86,8 +97,13 @@
         </section>
 
         <section>
+          <h1>WebVR !== WebGL</h1>
+          <h2 class="fragment">sensores de um óculos VR x renderização de gráficos</h2>
+        </section>
+
+        <section>
           <a href="https://w3c.github.io/webvr/">w3c.github.io/webvr</a>
-          <p>The specification is currently under active developement."</p>
+          <p>"The specification is currently under active developement."</p>
           <p class="fragment">"It is not a W3C Standard nor is it on the W3C Standards Track."</p>
         </section>
 
@@ -98,6 +114,11 @@
         <section>
           <h1>Mozilla <span class="highlight">❤</span> WebVR</h1>
           <a href="https://mozvr.com/">mozvr.com</a>
+        </section>
+
+        <section>
+          <h1>"Web é a plataforma"</h1>
+          <h2 class="fragment">Firefox OS não era uma plataforma <strong>nova</strong>, era ~a web</h2>
         </section>
 
         <section>
@@ -113,11 +134,26 @@
 
         <section>
           <h1>TL;DR</h1>
-          <h2>construir coisas em 3D utilizando HTML</h2>
+          <h2>Construir coisas em 3D utilizando HTML</h2>
+          <h2 class="fragment">*Mesma proposta do VRML!*</h2>
         </section>
 
         <section>
-          <a href="demo/hello.html">Hello, World!</a>
+          <h1>Web 3D > Web 2D</h1>
+        </section>
+
+        <section>
+          <h1>Three.js</h1>
+          <a href="http://threejs.org/">threejs.org</a>
+        </section>
+
+        <section>
+          <img src="images/ablaster1.gif" alt="">
+          <a href="https://aframe.io/a-blast/">A-blast</a>
+        </section>
+
+        <section>
+          <a href="demo/hello.html" target="_blank">Hello, World!</a>
         </section>
 
         <section>
@@ -136,7 +172,7 @@
 
         <section>
           <h1>Images 360°!</h1>
-          <a href="demo/360.html">Pedra do Bauzinho - São Bento do Sapucaí/SP</a>
+          <a href="demo/360.html" target="_blank">Pedra do Bauzinho - São Bento do Sapucaí/SP</a>
         </section>
 
         <section>
@@ -144,17 +180,13 @@
             <code data-trim data-noescape>
 &lt;a-scene&gt;
    &lt;a-assets&gt;
-     &lt;img id=&quot;pedra-do-bauzinho&quot; crossorigin=&quot;anonymous&quot; src=&quot;images/pedra-do-bauzinho.jpg&quot;&gt;
+     &lt;img id=&quot;pedra-do-bauzinho&quot; crossorigin=&quot;anonymous&quot;
+     src=&quot;images/pedra-do-bauzinho.jpg&quot;&gt;
    &lt;/a-assets&gt;
    &lt;a-sky src=&quot;#pedra-do-bauzinho&quot;&gt;&lt;/a-sky&gt;
 &lt;/a-scene&gt;
             </code>
           </pre>
-        </section>
-
-        <section>
-          <h1>Three.js</h1>
-          <a href="http://threejs.org/">threejs.org</a>
         </section>
 
         <!--<section>
@@ -221,7 +253,8 @@
         <section>
           <h1>Entidade</h1>
           <ul>
-            <li>Base de todos os objetos;</li>
+            <li>Base de todos os objetos</li>
+            <li>Uma entidade sem componentes === &lt;div&gt;&lt;/div&gt;</li>
           </ul>
         </section>
 
@@ -244,7 +277,6 @@
            <ul>
              <li>Atributos das entidades;</li>
              <li>Aparência, comportamento e funcionalidades;</li>
-             <li class="fragment">Uma entidade sem componentes === &lt;div&gt;&lt;/div&gt;</li>
            </ul>
         </section>
 
@@ -252,33 +284,36 @@
           <h1>Primitivas</h1>
           <pre>
           <code data-trim data-noescape>
-&lt;a-box color="purple" position="-1 0.5 -3" rotation="0 45 0"&gt;&lt;/a-box&gt;
+&lt;a-box
+  color="purple"
+  position="-1 0.5 -3"
+  rotation="0 45 0"&gt;
+&lt;/a-box&gt;
           </code>
           </pre>
         </section>
 
         <section>
-          começar a falar dos atributos e como fa
-          zer os componentes
-        </section>
-
-        <!-- poderia mudar de cor -->
-        <section>
-          web inspector :P
-        </section>
-
-        <section>
-          lembra que no começo funcionava num monte de canto?
-          a frame funfa tb!
-        </section>
-
-        <section>
-          gifs do a-painter da mozilla
+          <h1>Web inspector</h1>
+          <h2>&lt;ctrl&gt; + &lt;alt&gt; + &lt;i&gt;</h2>
         </section>
 
         <!-- poderia mudar de cor -->
         <section>
           <h1>Realidade Aumentada</h1>
+        </section>
+
+        <section>
+          <h1>AR.js</h1>
+          <a href="https://medium.com/arjs">medium.com/arjs</a>
+        </section>
+
+        <section>
+          <a href="demo/ar.html">Hello, AR!</a>
+        </section>
+
+        <section>
+          códigos
         </section>
 
         <!-- poderia mudar de cor -->
@@ -288,19 +323,10 @@
             <li><a href="https://aframevr-slack.herokuapp.com/">Slack</a></li>
             <li><a href="https://aframe.io/blog/">Blog</a> - mencione <a href="https://twitter.com/aframevr">@aframevr</a> no Twitter!  </li>
             <li><a href="https://aframe.io/aframe-school">A-frame School</a></li>
-            <li><a href="https://github.com/aframevr/aframe">Github</a></li>
+            <li><a href="https://github.com/aframevr/aframe">Github - Aframe</a></li>
             <li><a href="https://aframe.io/docs/">Documentação</a></li>
+            <li><a href="https://github.com/jeromeetienne/AR.js">Github - AR.js</a></li>
           </ul>
-        </section>
-
-        <!-- links que nao sei o q fazer -->
-        <section>
-          A-Frame uses the WebVR API to gain access to VR headset sensor data (position, orientation) to transform the camera and to render content directly to VR headsets. Note that WebVR, which provides data, should not be confused nor conflated with WebGL, which provides graphics and rendering.
-        </section>
-
-
-        <section>
-          "Web é a plataforma"
         </section>
 
         <!-- poderia mudar de cor -->
@@ -308,6 +334,9 @@
           <h2>Referências</h2>
           <a href="https://www.w3.org/People/Raggett/vrml/vrml.html">www.w3.org/People/Raggett/vrml/vrml.html</a><br />
           <a href="https://www.mozilla.org/pt-BR/about/manifesto/">www.mozilla.org/about/manifesto</a>
+          <a href="https://aframe.io/blog/arjs/">aframe.io/blog/arjs</a>
+          <a href="http://robmyers.org/2008/06/20/how-vrml-2-destroyed-internet-vr-for-a-decade/"></a>
+          <a href=""></a>
         </section>
 
         <section>
