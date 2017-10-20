@@ -5,20 +5,22 @@
  * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
  * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url('fonts/fonts.css');
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #1d2951;
-  background-color: #1d2951; }
+  background: #880e4f;
+  background-color: #880e4f; }
 
 .reveal {
-  font-family: "Source Code Pro", monospace;
-  font-size: 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 40px;
   font-weight: normal;
-  color: #00ffff; }
+  color: #fff;
+  text-shadow: 0 1px 5px #0a2646;
+}
 
 ::selection {
   color: #fff;
@@ -52,19 +54,19 @@ span.footer {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #00ffff;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
-  text-shadow: none;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  font-family: "Quicksand", sans-serif;
+}
 
 .reveal h1 {
-font-size: 53px; }
+font-size: 63px; }
 
 .reveal h2 {
-font-size: 40px; }
+font-size: 50px; }
 
 
 /*********************************************
@@ -72,7 +74,7 @@ font-size: 40px; }
  *********************************************/
 
 .reveal .highlight {
-  color: #ff00ff;
+  color: #ffff00;
 }
 
 /*********************************************
@@ -217,6 +219,7 @@ font-size: 40px; }
   word-wrap: break-word; }
 
 .reveal code {
+  text-shadow: none;
   font-family: monospace; }
 
 .reveal pre code {
