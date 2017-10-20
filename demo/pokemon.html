@@ -11,12 +11,14 @@
       <a-assets>
         <a-asset-item id="moltres-obj" src="obj/moltres/moltres.obj"></a-asset-item>
         <a-asset-item id="moltres-mtl" src="obj/moltres/moltres.mtl"></a-asset-item>
+        <img id="sky" src="images/bg-night.jpg" />
       </a-assets>
       <a-entity
         obj-model="obj: #moltres-obj; mtl: #moltres-mtl"
         position="-0.7 0 -5"
         scale="0.1 0.1 0.1"
       ></a-entity>
+      <a-sky src="#sky" rotation="0 -90 0" scale="-1 1 1"></a-sky>
     </a-scene>
   </body>
 </html>
