@@ -281,7 +281,7 @@ font-size: 50px; }
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #0000f1;
+  color: #0ff;
   text-shadow: none;
   border: none; }
 
